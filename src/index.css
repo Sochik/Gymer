@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*, ::after, ::before{
+  box-sizing: border-box;
+}
+
+
+
+.custom-pagination .swiper-pagination-bullet {
+  background: #fff;         /* or your desired color */
+  opacity: 0.5;
+  width: 18px;
+  height: 3px;
+  z-index: 10;
+  transform: skewY(-10deg);
+  border-radius: 000px;
+  transition: background 0.3s, opacity 0.3s;
+  margin: 0 4px;
+}
+.custom-pagination .swiper-pagination-bullet-active {
+  background: #f36100;      /* your primary color */
+  opacity: 1;
+}
