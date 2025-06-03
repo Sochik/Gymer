@@ -16,6 +16,7 @@ import prisca from './prisca.jpg';
 import mamuzo from './mamuzo.jpg';
 import chichi from './chichi.jpg';
 import luchi from './luchi.jpg';
+import tony from './tony.jpg';
 import chidera from './chidera.jpg';
 import galleryimg1 from './galleryimg1.jpg';
 import galleryimg2 from './galleryimg2.jpg';
@@ -25,6 +26,10 @@ import galleryimg5 from './galleryimg5.jpg';
 import galleryimg6 from './galleryimg6.jpg';
 import galleryimg7 from './galleryimg7.jpg';
 import galleryimg8 from './galleryimg8.jpg';
+import strength from './strength.jpg';
+import group from './group.jpg';
+import plus1 from './plus1.jpg';
+import personalTraining from './personalTraining.jpg';
 
 
 export {
@@ -46,6 +51,7 @@ export {
   mamuzo,
   chichi,
   luchi,
+  tony,
   chidera,
   galleryimg1,
   galleryimg2,
@@ -54,6 +60,9 @@ export {
   galleryimg5,
   galleryimg6,
   galleryimg7,
-  galleryimg8
-  
+  galleryimg8,
+  strength,
+  group,
+  plus1,
+  personalTraining,
 };

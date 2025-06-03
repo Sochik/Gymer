@@ -2,7 +2,7 @@ import { CgGym } from "react-icons/cg";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { GiFruitBowl, GiWeightLiftingUp } from "react-icons/gi";
 import { MdFitnessCenter } from "react-icons/md";
-import { boxing, cycling, gamba, kettlebellpower, weightlifting, yoga, ben, bolu, chichi, mamuzo, prisca, taiwo, luchi, chidera } from "../assets/images";
+import { boxing, cycling, gamba, kettlebellpower, weightlifting, yoga, ben, bolu, chichi, mamuzo, prisca, taiwo, luchi, chidera, tony } from "../assets/images";
 
 
 const services = [
@@ -135,7 +135,7 @@ const teamMembers = [
   { name: "Chichi KC", category: "Flexibility", image: chichi },
   { name: "Luchi Uche", category: "Flexibility", image: luchi },
   { name: "Chidera Ugochukwu", category: "Cardio", image: chidera },
-  {name: "Rachael Babagida", category: "Strength", image: "" },
+  {name: "Tony Babatunde", category: "Strength", image: tony },
 ];
 const timetableData = [
   {

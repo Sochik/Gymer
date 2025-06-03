@@ -121,9 +121,9 @@ export default function Home() {
             return (
               <div
                 key={plan.id}
-                className="flex transform -skew-y-6 font-oswald justify-center items-center border-2 border-text p-10 pb-14 mx-4 mb-8 group hover:bg-light transition-all duration-300 ease-in"
+                className="flex transform w-full -skew-y-6 font-oswald justify-center items-center border-2 border-text p-10 pb-14 mx-6 mb-8 group hover:bg-light transition-all duration-300 ease-in"
               >
-                <div className="transform skew-y-6 flex flex-col gap-2 ">
+                <div className="transform skew-y-6 w-full items-center flex flex-col gap-2 ">
                   <h2 className="text-center text-light group-hover:text-secondary text-3xl font-semibold mb-2">
                     {plan.name}
                   </h2>
@@ -150,7 +150,7 @@ export default function Home() {
                   </div>
                   <Link
                     to="/about"
-                    className="mt-3 px-3 md:px-6 py-2  font-bold rounded-md bg-accent transition-all text-center items-center justify-center block w-[50vw] md:w-[16vw] group-hover:bg-primary text-light"
+                    className="mt-3 px-3 md:px-6 py-2 font-muli uppercase font-bold text-sm rounded-md bg-accent transition-all text-center items-center justify-center block w-[50vw] md:w-[16vw] group-hover:bg-primary text-light"
                   >
                     Enroll
                   </Link>

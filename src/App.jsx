@@ -9,6 +9,8 @@ import OurTeam from './Pages/OurTeam';
 import OurGallery from './Pages/OurGallery';
 import Timetable from './Pages/Timetable';
 import BMICalculator from './Pages/BMICalculator';
+import Contact from './Pages/Contact';
+import Services from './Pages/Services';
 
 export default function App() {
   const [selectedPage, setSelectedPage] = useState("All");
@@ -45,6 +47,14 @@ export default function App() {
         {
           path: "/bmi-calculator",
           element: <BMICalculator />
+        },
+        {
+          path: "/services",
+          element: <Services />
+        },
+        {
+          path: "/contact",
+          element: <Contact />
         },
         { path: "/timetable",
           element: <Timetable />
