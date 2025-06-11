@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { kettle } from "../assets/images";
 import { Link } from "react-router-dom";
 import { teamMembers } from "../Data/itemsData";
@@ -6,6 +6,9 @@ import { LiaEnvelope, LiaFacebook, LiaInstagram } from "react-icons/lia";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function OurTeam() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="h-auto w-full bg-secondary">
       <div
@@ -83,7 +86,7 @@ export default function OurTeam() {
                     </ol>
                   </div>
                   <Link
-                    to="/team"
+                    to={`/trainer/${encodeURIComponent(card.name)}`}
                     className="font-oswald px-2 z-30 md:px-7 py-1 my-2 font-bold bg-inherit transition-all text-center border-2 border-primary  text-light flex items-center justify-center"
                   >
                     Book

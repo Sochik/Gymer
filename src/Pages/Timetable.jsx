@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { kettle } from "../assets/images";
 import { Link } from "react-router-dom";
 import { timetableData } from "../Data/itemsData";
@@ -27,7 +27,9 @@ export default function Timetable() {
 
   const filterSessions = (session) =>
     activeCategory === "All" || session.category === activeCategory;
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="h-auto w-full bg-secondary">
       <div

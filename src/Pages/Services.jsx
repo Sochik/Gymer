@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
     asideimg,
   boxing,
@@ -47,6 +47,9 @@ function chunkArray(array, size) {
 }
 
 export default function Services() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="h-auto w-full bg-secondary">
       <div

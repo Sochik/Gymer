@@ -11,6 +11,10 @@ import Timetable from './Pages/Timetable';
 import BMICalculator from './Pages/BMICalculator';
 import Contact from './Pages/Contact';
 import Services from './Pages/Services';
+import Classes from './Pages/Classes';
+import Trainer from './Pages/Trainer';
+import ClassDetail from './Pages/ClassDetail';
+import About from './Pages/About';
 
 export default function App() {
   const [selectedPage, setSelectedPage] = useState("All");
@@ -51,6 +55,22 @@ export default function App() {
         {
           path: "/services",
           element: <Services />
+        },
+        {
+          path: "/classes",
+          element: <Classes />
+        },
+        {
+          path: "/about",
+          element: <About />
+        },
+        {
+          path: "/trainer/:name",
+          element: <Trainer />
+        },
+        {
+          path: "/classDetail/:id",
+          element: <ClassDetail />
         },
         {
           path: "/contact",

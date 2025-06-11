@@ -7,6 +7,9 @@ import Team from "../Components/Team";
 import Gallery from "../Components/Gallery";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section className="">
@@ -45,7 +48,7 @@ export default function Home() {
       <section className="container mx-auto py-10 bg-secondary px-4 md:px-14 lg:px-24">
         <div className="flex flex-col gap-2 items-center pt-32 pb-24 justify-center ">
           <span className="text-xl md:text-2xl font-bold font-gaegu text-primary text-center uppercase">
-            Our Class
+            Our Classes
           </span>
           <h2 className="text-3xl md:text-5xl font-oswald text-light font-semibold text-center uppercase">
             What WE can Offer
@@ -57,7 +60,7 @@ export default function Home() {
               key={item.id}
               className="relative flex flex-col justify-end items-center w-full bg-white h-96 md:h-[28rem] overflow-hidden group"
             >
-              <div className="inset-0 w-full h-full object-cover z-0 transition-transform duration-300  group-hover:scale-105 after:absolute after:min-h-28 after:w-full after:z-10 after:bg-backdrop after:mt-1 after:top-56 after:-skew-y-6 after:border-t-4 after:border-dark">
+              <div className="inset-0 w-full h-full object-cover z-0 transition-transform duration-300  group-hover:scale-105 after:absolute after:min-h-28 after:w-full after:z-10 after:bg-backdrop after:mt-1 after:top-52 after:-skew-y-6 after:border-t-4 after:border-dark">
                 <img
                   src={item.image}
                   alt={item.name}

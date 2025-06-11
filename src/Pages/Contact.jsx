@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { kettle } from "../assets/images";
 import { Link } from "react-router-dom";
 import { MdMyLocation } from "react-icons/md";
@@ -11,6 +11,9 @@ import {
 } from "react-icons/fa6";
 
 export default function Contact() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="h-auto w-full bg-secondary">
       <div
