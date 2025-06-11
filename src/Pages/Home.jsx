@@ -77,7 +77,7 @@ export default function Home() {
                   </h3>
                 </div>
                 <Link
-                  to="/about"
+                  to={`/classDetail/${item.id}`}
                   className="mt-3 px-3 md:px-6 py-2 font-bold bg-accent transition-all text-center group-hover:bg-primary h-12 w-12 text-light flex items-center justify-center"
                 >
                   &#10140;
@@ -88,7 +88,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto bg-cover bg-center h-full flex items-center justify-center"
+      <section
+        className="container mx-auto bg-cover bg-center h-full flex items-center justify-center"
         style={{ backgroundImage: `url(${asideimg})` }}
       >
         <div className="w-full h-full px-4 md:px-14 lg:px-24 bg-secondary bg-opacity-35">

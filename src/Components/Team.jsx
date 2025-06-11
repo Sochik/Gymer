@@ -12,14 +12,19 @@ export default function Team() {
   return (
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
-          autoplay={{ delay: 5000 }}
-        spaceBetween={30}
-          loop={true}
+      autoplay={{ delay: 5000 }}
+      spaceBetween={30}
+      loop={true}
       navigation
-          pagination={{
-              clickable: true,
-          el: ".custom-pagination",}}
-          breakpoints={{0: { slidesPerView: 1 }, 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}
+      pagination={{
+        clickable: true,
+        el: ".custom-pagination",
+      }}
+      breakpoints={{
+        0: { slidesPerView: 1 },
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }}
       className="w-full h-full"
     >
       {teamMembers.map((card, index) => (
@@ -41,7 +46,7 @@ export default function Team() {
                 </h3>
               </div>
               <Link
-                to="/"
+                to={`/trainer/${encodeURIComponent(card.name)}`}
                 className="mt-3 px-2 font-oswald z-20 md:px-7 py-2 font-bold bg-inherit transition-all text-center border-2 border-primary  text-light flex items-center justify-center"
               >
                 Book
@@ -50,7 +55,7 @@ export default function Team() {
           </div>
         </SwiperSlide>
       ))}
-          <div className="custom-pagination flex gap-2 justify-center my-6"></div>
+      <div className="custom-pagination flex gap-2 justify-center my-6"></div>
     </Swiper>
   );
 }
