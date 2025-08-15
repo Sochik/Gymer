@@ -15,6 +15,7 @@ import Classes from './Pages/Classes';
 import Trainer from './Pages/Trainer';
 import ClassDetail from './Pages/ClassDetail';
 import About from './Pages/About';
+import Register from './Pages/Register';
 
 export default function App() {
   const [selectedPage, setSelectedPage] = useState("All");
@@ -79,6 +80,10 @@ export default function App() {
         { path: "/timetable",
           element: <Timetable />
         },
+        {
+          path: "/register",
+          element: <Register />
+        }
       ],
     },
   ]);

@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { asideimg } from "../assets/images";
 import Team from "../Components/Team";
 import Gallery from "../Components/Gallery";
+import Services from "../Components/Services";
+import SectionHeader from "../Components/SectionHeader";
 
 export default function Home() {
   useEffect(() => {
@@ -18,41 +20,20 @@ export default function Home() {
 
       <section className="container mx-auto bg-backdrop px-4 md:px-14 lg:px-24">
         <div className="flex flex-col gap-2 items-center pt-32 pb-24 justify-center ">
-          <span className="text-xl md:text-2xl font-bold font-gaegu text-primary text-center">
-            WHY CHOOSE US?
-          </span>
-          <h2 className="text-3xl md:text-5xl font-oswald text-light font-semibold text-center">
-            PUSHING YOUR LIMITS FORWARD
-          </h2>
-          <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="flex flex-col gap-4 transition-transform duration-700 ease-in-out justify-center items-center mt-8 px-4 text-center group"
-              >
-                <span className="h-24 w-24 bg-accent group-hover:bg-primary rounded-full flex items-center justify-center text-primary group-hover:text-light text-2xl font-bold">
-                  {service.icon}
-                </span>
-                <h4 className="text-light text-center md:text-left text-2xl font-extrabold uppercase font-oswald">
-                  {service.title}
-                </h4>
-                <p className="text-dark text-center md:text-center text-base font-muli">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
+          <SectionHeader
+            title="WHY CHOOSE US?"
+            subtitle="PUSHING YOUR LIMITS FORWARD"
+          />
+          <Services />
         </div>
       </section>
 
       <section className="container mx-auto py-10 bg-secondary px-4 md:px-14 lg:px-24">
         <div className="flex flex-col gap-2 items-center pt-32 pb-24 justify-center ">
-          <span className="text-xl md:text-2xl font-bold font-gaegu text-primary text-center uppercase">
-            Our Classes
-          </span>
-          <h2 className="text-3xl md:text-5xl font-oswald text-light font-semibold text-center uppercase">
-            What WE can Offer
-          </h2>
+          <SectionHeader
+            title="OUR CLASSES"
+            subtitle="WHAT WE CAN OFFER"
+          />
         </div>
         <div className="flex flex-col md:grid-cols-3 md:grid items-center justify-center gap-8">
           {classes.map((item) => (
@@ -101,7 +82,7 @@ export default function Home() {
               where health, beauty and fitness meet.
             </p>
             <Link
-              to="/about"
+              to="/register"
               className="mt-3 px-9 md:px-12 font-oswald py-2 bg-inherit text-light border-2 border-primary font-bold rounded-md hover:bg-primary transition-all text-center items-center justify-center block w-fit"
             >
               Register
@@ -112,12 +93,7 @@ export default function Home() {
 
       <section className="container mx-auto bg-secondary px-4 md:px-14 lg:px-24">
         <div className="flex flex-col gap-2 items-center pt-32 pb-24 justify-center ">
-          <span className="text-xl md:text-2xl font-bold font-gaegu text-primary text-center uppercase">
-            Our Plan
-          </span>
-          <h2 className="text-3xl md:text-5xl font-oswald text-light font-semibold text-center uppercase">
-            Choose Your Pricing Plan
-          </h2>
+          <SectionHeader title="OUR PLANS" subtitle="FIND YOUR FIT" />
         </div>
         <div className="flex flex-col md:flex-row items-center justify-center gap-8">
           {plans.map((plan) => {
@@ -171,12 +147,10 @@ export default function Home() {
 
       <section className="container mx-auto bg-secondary px-4 md:px-14 lg:px-24">
         <div className="flex flex-col gap-2 items-center pt-20 pb-24 justify-center ">
-          <span className="text-xl md:text-2xl font-bold font-gaegu text-primary text-center uppercase">
-            Our Team
-          </span>
-          <h2 className="text-3xl md:text-5xl font-oswald text-light font-semibold text-center uppercase">
-            Train With Experts
-          </h2>
+          <SectionHeader
+            title="MEET OUR TEAM"
+            subtitle="EXPERTS IN YOUR CORNER"
+          />
         </div>
         <Team />
       </section>

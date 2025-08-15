@@ -30,7 +30,21 @@ import strength from './strength.jpg';
 import group from './group.jpg';
 import plus1 from './plus1.jpg';
 import personalTraining from './personalTraining.jpg';
-
+import tip3 from "./tip3.jpg";
+import ameh from "./ameh.jpg";
+import blog1 from "./blog1.jpg";
+import blog2 from "./blog2.jpg";
+import blog3 from "./blog3.jpg";
+import blog4 from "./blog4.jpg";
+import blog5 from "./blog5.jpg";
+import blog6 from "./blog6.jpg";
+import dami from "./dami.jpg";
+import ochy from "./ochy.jpg";
+import ogah from "./ogah.jpg";
+import story1 from "./story1.jpg";
+import story3 from "./story3.jpg";
+import tip1 from "./tip1.jpg";
+import tip2 from "./tip2.jpg";    
 
 export {
   logo,
@@ -65,4 +79,20 @@ export {
   group,
   plus1,
   personalTraining,
+  tip3,
+  ameh,
+  blog1,
+  blog2,
+  blog3,
+  blog4,
+  blog5,
+  blog6,
+  dami,
+  ochy,
+  ogah,
+  story1,
+  story3,
+  tip1,
+  tip2,
 };
+

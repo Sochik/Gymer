@@ -4,6 +4,7 @@ import { classes, teamMembers } from "../Data/itemsData";
 import { kettle } from "../assets/images";
 import { LiaEnvelope, LiaFacebook, LiaInstagram } from "react-icons/lia";
 import { FaXTwitter } from "react-icons/fa6";
+import Aside from "../Components/Aside";
 
 export default function ClassDetail() {
   const { id } = useParams();
@@ -47,8 +48,8 @@ export default function ClassDetail() {
           </div>
         </div>
       </div>
-      <div className="container w-full md:px-14 lg:px-24 h-auto gap-8 flex flex-col md:flex-row mb-12">
-        <div className="w-full md:w-4/6 bg-secondary shadow-lg md:py-8 mt-8 flex flex-col items-start">
+      <div className="container w-full md:px-14 lg:px-24 h-auto gap-8 flex flex-col md:flex-row">
+        <div className="w-full md:w-4/6 bg-secondary md:py-8 mt-8 flex flex-col items-start">
           <div className="w-full mb-6 md:mb-0">
             <img
               src={classDetail.image}
@@ -79,7 +80,7 @@ export default function ClassDetail() {
               );
               if (!trainer) return null;
               return (
-                <div className="w-full bg-secondary rounded-lg shadow-lg mt-8 flex gap-6 flex-col md:flex-row items-center">
+                <div className="w-full bg-secondary rounded-lg  mt-8 flex gap-6 flex-col md:flex-row items-center">
                   <div className="w-full md:h-96 flex-1">
                     <img
                       src={trainer.image}
@@ -135,64 +136,8 @@ export default function ClassDetail() {
             })()}
           </div>{" "}
         </div>
-        <div className="flex flex-col h-full items-start justify-center w-full md:w-2/6 mt-8 md:py-8">
-          <div className="flex flex-col w-full">
-            <h5 className="text-white px-6 md:px-2 mb-6 uppercase text-xl font-bold font-oswald">
-              Categories
-            </h5>
-            {[
-              {
-                category: "Flexibility",
-                classes: "10",
-              },
-              {
-                category: "Cardio",
-                classes: "12",
-              },
-              {
-                category: "Strength",
-                classes: "15",
-              },
-              {
-                category: "Combat",
-                classes: "13",
-              },
-              {
-                category: "Strength",
-                classes: "15",
-              },
-              {
-                category: "Dance",
-                classes: "10",
-              },
-              {
-                category: "Flexibility",
-                classes: "10",
-              },
-            ].map((cate, index) => {
-              const isEven = index % 2 === 0;
-              const cellBg = isEven ? "bg-backdrop" : "bg-secondary";
-              return (
-                <div className="flex flex-col w-full text-sm h-full">
-                  <Link
-                    to={`/classDetail/${classDetail.id}`}
-                    className={`flex w-full py-2 px-6 md:px-4 justify-between ${cellBg} group text-text items-center`}
-                  >
-                    <h5 className=" group-hover:text-primary">
-                      {cate.category}
-                    </h5>
-                    <p className="group-hover:text-white">{cate.classes}</p>
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
-          <div className="flex flex-col mt-6 w-full">
-            <h5 className="text-white px-6 md:px-2 mb-6 uppercase text-xl font-bold font-oswald">
-              Top Stories
-            </h5>
-          </div>
-        </div>
+        <div className="flex flex-col w-full md:w-2/6 bg-secondary mt-8"><Aside /></div>
+        
       </div>
     </section>
   );

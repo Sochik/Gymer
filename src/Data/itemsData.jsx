@@ -18,6 +18,21 @@ import {
   luchi,
   chidera,
   tony,
+  dami,
+  ogah,
+  ameh,
+  ochy,
+  tip2,
+  tip1,
+  tip3,
+  blog6,
+  blog5,
+  blog4,
+  blog3,
+  blog2,
+  blog1,
+  story3,
+  story1,
 } from "../assets/images";
 
 const services = [
@@ -397,6 +412,112 @@ const bmiChart = [
   { range: "Overweight", bmi: "25 - 29.9" },
   { range: "Obesity", bmi: "30 and above" },
 ];
+const testimonials = [
+  {
+    id: 1,
+    image: dami,
+    text: "Gymer has transformed my fitness journey. The trainers are incredibly supportive!",
+    author: "Dami",
+  },
+  {
+    id: 2,
+    image: ogah,
+    text: "I love the variety of classes offered. There's something for everyone!",
+    author: "Ogah",
+  },
+  {
+    id: 3,
+    image: ameh,
+    text: "The community at Gymer is amazing. I've made so many friends here!",
+    author: "Ameh",
+  },
+  {
+    id: 4,
+    image: ochy,
+    text: "Gymer has changed my life for the better. I can't recommend it enough!",
+    author: "Ochy",
+  },
+];
+const topStories = [
+  {
+    photo: story1,
+    headline: "Grand Opening: New Gym Facilities",
+    date: "Aug 10, 2025",
+    link: "/blog/grand-opening",
+  },
+  {
+    photo: ochy,
+    headline: "Member Spotlight: Achieving Goals",
+    date: "Jul 28, 2025",
+    link: "/blog/member-spotlight",
+    },
+  {
+    photo: story3,
+    headline: "Fitness Challenge: Join Us!",
+    date: "Jul 15, 2025",
+    link: "/blog/fitness-challenge",
+  },
+];
+
+const blogPosts = [
+  {
+    photo: blog1,
+    headline: "5 Ways to Stay Motivated",
+    date: "Aug 5, 2025",
+    link: "/blog/stay-motivated",
+  },
+  {
+    photo: blog2,
+    headline: "Nutrition Tips for Beginners",
+    date: "Jul 20, 2025",
+    link: "/blog/nutrition-tips",
+    },
+    {
+      photo: blog3,
+      headline: "The Importance of Rest Days",
+      date: "Jun 30, 2025",
+      link: "/blog/rest-days",
+    },
+    {
+      photo: blog4,
+      headline: "Mindfulness and Meditation",
+      date: "Jun 15, 2025",
+      link: "/blog/mindfulness",
+    },
+    {
+      photo: blog5,
+      headline: "Building a Home Gym",
+      date: "May 30, 2025",
+      link: "/blog/home-gym",
+    },
+    {
+      photo: blog6,
+      headline: "The Benefits of Cross-Training",
+      date: "May 15, 2025",
+      link: "/blog/cross-training",
+    }
+];
+
+const tips = [
+  {
+    photo: tip1,
+    headline: "Stretch Before Every Workout",
+    date: "Aug 1, 2025",
+    link: "/blog/stretching",
+  },
+  {
+    photo: tip2,
+    headline: "Hydration is Key",
+    date: "Jul 15, 2025",
+    link: "/blog/hydration",
+    },
+    {
+      photo: tip3,
+      headline: "Proper Form is Crucial",
+      date: "Jul 1, 2025",
+      link: "/blog/proper-form",
+    },
+];
 
 export {
   services,
@@ -406,4 +527,8 @@ export {
   teamMembers,
   timetableData,
   bmiChart,
+  testimonials,
+  topStories,
+  blogPosts,
+  tips,
 };

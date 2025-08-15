@@ -38,7 +38,7 @@ export default function Header() {
     { name: "Services", to: "/services" },
     {
       name: "Pages",
-      to: "/pages",
+      to: "",
       subLinks: [
         { name: "About Us", to: "/about" },
         { name: "Timetable", to: "/timetable" },

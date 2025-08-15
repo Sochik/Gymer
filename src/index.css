@@ -24,3 +24,6 @@
   background: #f36100;      /* your primary color */
   opacity: 1;
 }
+input{
+  outline: none;
+}

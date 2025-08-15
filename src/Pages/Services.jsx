@@ -9,6 +9,8 @@ import {
 } from "../assets/images";
 import { Link } from "react-router-dom";
 import { packages, plans } from "../Data/itemsData";
+import PageSectionHeader from "../Components/PageSectionHeader";
+import PageHero from "../Components/PageHero";
 
 const services = [
   {
@@ -52,40 +54,9 @@ export default function Services() {
   }, []);
   return (
     <section className="h-auto w-full bg-secondary">
-      <div
-        className="container md:px-14 lg:px-24 w-full h-full flex items-center pb-6 justify-start bg-cover bg-center z-10 "
-        style={{ backgroundImage: `url(${kettle})` }}
-      >
-        <div className="h-[65vh] w-full flex flex-col items-center justify-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-light font-oswald uppercase text-center">
-            Our Services
-          </h1>
-          <div className="flex font-muli items-center justify-center mt-6">
-            <Link
-              to={"/"}
-              className="p-2 text-light font-bold hover:text-primary transition-all duration-300"
-            >
-              Back to Home
-            </Link>
-            <span className="text-light font-bold">|</span>
-            <Link
-              to={"/services"}
-              className="p-2 font-bold text-primary transition-all duration-300"
-            >
-              Our Services
-            </Link>
-          </div>
-        </div>
-      </div>
+      <PageHero title="Our Services" link="/services" />
       <div className="container md:px-14 lg:px-24 w-full h-full flex flex-col items-center justify-center z-20 bg-secondary">
-        <div className="w-full h-auto flex flex-col items-start px-4 py-12 justify-center">
-          <h2 className="text-md font-bold text-primary font-muli uppercase text-center mt-10">
-            What we do
-          </h2>
-          <p className="text-light font-oswald text-3xl font-bold uppercase text-start mt-4">
-            Pushing the Limits of Fitness
-          </p>
-        </div>
+        <PageSectionHeader title="Our Services" subtitle="What We Offer" />
         <div className="w-full h-full flex flex-col mb-12 items-center justify-center">
           {chunkArray(services, 2).map((row, rowIndex) => (
             <div
@@ -102,7 +73,7 @@ export default function Services() {
                     className="w-full md:w-1/2 flex-1 flex flex-col items-center justify-center"
                   >
                     <div
-                      className={`w-full h-full bg-accent hover:bg-accent flex flex-col ${
+                      className={`w-full h-full bg-accent transition-all duration-300 ease-in-out hover:bg-primary flex flex-col ${
                         isEvenRow ? "md:flex-row" : "md:flex-row-reverse"
                       } items-center justify-center group`}
                     >
@@ -121,7 +92,7 @@ export default function Services() {
                         </div>
                         <Link
                           to="/"
-                          className="group-hover:text-primary text-light mb-4 ml-4 font-muli uppercase font-bold"
+                          className="text-light mb-4 ml-4 font-muli uppercase font-bold"
                         >
                           Explore
                         </Link>
@@ -147,7 +118,7 @@ export default function Services() {
                 where health, beauty and fitness meet.
               </p>
               <Link
-                to="/about"
+                to="/register"
                 className="mt-3 px-9 md:px-12 font-oswald py-2 bg-inherit text-light border-2 border-primary font-bold rounded-md hover:bg-primary transition-all text-center items-center justify-center block w-fit"
               >
                 Register

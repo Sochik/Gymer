@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { kettle } from "../assets/images";
 import { Link } from "react-router-dom";
 import { timetableData } from "../Data/itemsData";
+import PageHero from "../Components/PageHero";
 
 const times = [
   "6:00am - 8:00am",
@@ -32,31 +33,7 @@ export default function Timetable() {
   }, []);
   return (
     <section className="h-auto w-full bg-secondary">
-      <div
-        className="container md:px-14 lg:px-24 w-full h-full flex items-center pb-6 justify-start bg-cover bg-center z-10 "
-        style={{ backgroundImage: `url(${kettle})` }}
-      >
-        <div className="h-[65vh] w-full flex flex-col items-center justify-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-light font-oswald uppercase text-center">
-            Classes Timetable
-          </h1>
-          <div className="flex font-muli items-center justify-center mt-6">
-            <Link
-              to={"/"}
-              className="p-2 text-light font-bold hover:text-primary transition-all duration-300"
-            >
-              Back to Home
-            </Link>
-            <span className="text-light font-bold">|</span>
-            <Link
-              to={"/timetable"}
-              className="p-2 font-bold text-primary transition-all duration-300"
-            >
-              Timetable
-            </Link>
-          </div>
-        </div>
-      </div>
+      <PageHero title="Classes Timetable" link="/timetable" />
       <div className="container px-6 md:px-14 lg:px-24 w-full h-full flex flex-col items-center justify-center z-20 bg-secondary">
         <div className="w-full h-auto flex md:flex-row flex-col py-12 justify-center">
           <div className="w-full h-auto flex flex-col items-start justify-center">
@@ -67,7 +44,7 @@ export default function Timetable() {
               Our Master Piece for You
             </p>
           </div>
-          <div className="flex gap-3 bg-backdrop px-2 h-auto items-center justify-center">
+          <div className="flex gap-3 px-2 h-auto items-center justify-center">
             {categories.map((cat) => (
               <button
                 key={cat}
