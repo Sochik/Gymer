@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { kettle } from "../assets/images";
+import  { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { classes } from "../Data/itemsData";
 import PageSectionHeader from "../Components/PageSectionHeader";
@@ -12,7 +11,7 @@ export default function Classes() {
     return (
       <section className="h-auto w-full bg-secondary">
         <PageHero title="Our Classes" link="/classes" />
-        <div className="container w-full px-6 md:px-14 lg:px-24 h-auto gap-5 flex flex-col mb-12 items-center justify-center">
+        <div className="container w-full px-6 md:px-14 lg:px-24 h-auto gap-5 flex flex-col pb-16 mx-auto items-center justify-center">
          <PageSectionHeader title="Our Classes" subtitle="Join Our Fitness Classes" />
           <div className="flex flex-col md:grid-cols-3 md:grid items-center justify-center gap-8">
             {classes.map((item) => (

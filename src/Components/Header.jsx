@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FaBars, FaXTwitter } from "react-icons/fa6";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { logo } from "../assets/images";
@@ -54,7 +54,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         headerBg
-          ? "bg-backdrop ease-in-out transition-all duration-500 h-12 md:h-16 items-center shadow-4xl"
+          ? "bg-secondary/80 backdrop-blur-sm ease-in-out transition-all duration-500 h-12 md:h-16 items-center shadow-4xl"
           : "bg-transparent"
       } md:h-24 h-16 w-full font-gaegu flex items-end justify-between px-4 md:px-14 lg:px-24`}
     >
@@ -74,7 +74,7 @@ export default function Header() {
       <nav
         className={`relative w-full h-full flex items-end justify-end ${
           headerBg
-            ? "bg-backdrop h-16 items-center transition-all duration-500 shadow-4xl"
+            ? "bg-transparent h-16 items-center transition-all duration-500"
             : "bg-transparent"
         }`}
       >

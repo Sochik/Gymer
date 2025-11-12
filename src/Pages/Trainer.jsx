@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { teamMembers } from "../Data/itemsData";
@@ -77,7 +77,6 @@ export default function Trainer() {
                   <li
                     key={idx}
                     className="text-light hover:text-primary text-lg font-thin p-1 transition-colors duration-300"
-                    onClick={() => setMenuOpen(false)}
                   >
                     <Link to={link.to}>{link.icon}</Link>
                   </li>

@@ -1,7 +1,6 @@
 import { CgGym } from "react-icons/cg";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { GiFruitBowl, GiWeightLiftingUp } from "react-icons/gi";
-import { MdFitnessCenter } from "react-icons/md";
 import {
   boxing,
   cycling,
@@ -17,7 +16,6 @@ import {
   taiwo,
   luchi,
   chidera,
-  tony,
   dami,
   ogah,
   ameh,

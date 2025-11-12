@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { kettle } from "../assets/images";
-import { Link } from "react-router-dom";
 import { timetableData } from "../Data/itemsData";
 import PageHero from "../Components/PageHero";
 

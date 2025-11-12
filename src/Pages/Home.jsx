@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, } from "react";
 import Slider from "../Components/Slider";
-import { classes, packages, plans, services } from "../Data/itemsData";
+import { classes, packages, plans } from "../Data/itemsData";
 import { Link } from "react-router-dom";
 import { asideimg } from "../assets/images";
 import Team from "../Components/Team";
@@ -28,8 +28,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto py-10 bg-secondary px-4 md:px-14 lg:px-24">
-        <div className="flex flex-col gap-2 items-center pt-32 pb-24 justify-center ">
+      <section className=" mx-auto py-10 bg-secondary px-4 md:px-14 lg:px-24">
+        <div className="container flex flex-col gap-2 items-center pt-32 pb-24 justify-center ">
           <SectionHeader
             title="OUR CLASSES"
             subtitle="WHAT WE CAN OFFER"
@@ -41,7 +41,7 @@ export default function Home() {
               key={item.id}
               className="relative flex flex-col justify-end items-center w-full bg-white h-96 md:h-[28rem] overflow-hidden group"
             >
-              <div className="inset-0 w-full h-full object-cover z-0 transition-transform duration-300  group-hover:scale-105 after:absolute after:min-h-28 after:w-full after:z-10 after:bg-backdrop after:mt-1 after:top-52 after:-skew-y-6 after:border-t-4 after:border-dark">
+              <div className="inset-0 w-full h-full object-cover z-0 transition-transform duration-300  group-hover:scale-105 after:absolute after:min-h-28 after:w-full after:z-10 after:bg-backdrop after:mt-1 after:top-60 after:-skew-y-6 after:border-t-4 after:border-dark">
                 <img
                   src={item.image}
                   alt={item.name}
@@ -70,7 +70,7 @@ export default function Home() {
       </section>
 
       <section
-        className="container mx-auto bg-cover bg-center h-full flex items-center justify-center"
+        className="bg-cover bg-center h-full flex items-center justify-center"
         style={{ backgroundImage: `url(${asideimg})` }}
       >
         <div className="w-full h-full px-4 md:px-14 lg:px-24 bg-secondary bg-opacity-35">
@@ -91,7 +91,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto bg-secondary px-4 md:px-14 lg:px-24">
+      <section className=" mx-auto bg-secondary px-4 md:px-14 lg:px-24">
         <div className="flex flex-col gap-2 items-center pt-32 pb-24 justify-center ">
           <SectionHeader title="OUR PLANS" subtitle="FIND YOUR FIT" />
         </div>
@@ -145,7 +145,7 @@ export default function Home() {
         <Gallery />
       </section>
 
-      <section className="container mx-auto bg-secondary px-4 md:px-14 lg:px-24">
+      <section className=" mx-auto bg-secondary px-4 md:px-14 lg:px-24">
         <div className="flex flex-col gap-2 items-center pt-20 pb-24 justify-center ">
           <SectionHeader
             title="MEET OUR TEAM"

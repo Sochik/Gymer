@@ -113,7 +113,7 @@ export default function About() {
                 className=" object-cover mb-2 h-32 w-32 rounded-full"
               />
               <p className="text-text font-muli text-center mb-2">
-                "{testimonials[testIndex].text}"
+                {testimonials[testIndex].text}
               </p>
               <h4 className="text-lg font-bold text-light font-oswald">
                 {testimonials[testIndex].author}
@@ -144,7 +144,7 @@ export default function About() {
         </div>
       </div>
       <section
-        className="container mx-auto bg-cover bg-center h-full flex items-center justify-center"
+        className=" mx-auto bg-cover bg-center h-full flex items-center justify-center"
         style={{ backgroundImage: `url(${asideimg})` }}
       >
         <div className="w-full h-full px-4 md:px-14 lg:px-24 bg-secondary bg-opacity-35">

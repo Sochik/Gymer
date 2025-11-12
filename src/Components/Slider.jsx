@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { heroimg1, heroimg2, } from "../assets/images";
@@ -58,28 +57,28 @@ export default function Slider() {
   ];
 
   return (
-    <div className="slider">
+    <div className="slider relative">
       <Swiper
-        className="w-full h-[75vh] md:h-[130vh]"
+        className="w-full h-[75vh] md:h-[100vh]"
         modules={[Navigation, Pagination, Autoplay]}
         navigation
         pagination={{
           clickable: true,
-        el: ".custom-pagination",
+          el: ".custom-pagination",
         }}
         autoplay={{ delay: 5000 }}
       >
         {images.map((item) => (
           <SwiperSlide
             key={item.id}
-            className="container md:px-14 lg:px-24 w-full h-full flex items-center pb-6 justify-start bg-cover bg-center z-10 "
+            className="w-full h-full flex items-center pb-6 justify-start bg-cover bg-center z-10"
             style={{ backgroundImage: `url(${item.image})` }}
           >
-            <div className="">{item.title}</div>
+            <div className="container md:px-14 lg:px-24 w-full">{item.title}</div>
           </SwiperSlide>
         ))}
-        <div className="custom-pagination flex gap-2 justify-center"></div>
       </Swiper>
+      <div className="custom-pagination flex gap-2 justify-center left-1/2 transform -translate-x-1/2 top-10 z-20"></div>
     </div>
   );
 }

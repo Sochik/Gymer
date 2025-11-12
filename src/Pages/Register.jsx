@@ -1,8 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { plans } from "../Data/itemsData";
-import { Link } from "react-router-dom";
-import { kettle } from "../assets/images";
-import ClassDetail from "./ClassDetail";
 import Aside from "../Components/Aside";
 import PageHero from "../Components/PageHero";
 import PageSectionHeader from "../Components/PageSectionHeader";

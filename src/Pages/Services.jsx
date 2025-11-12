@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import {
     asideimg,
   boxing,
-  kettle,
   personalTraining,
   strength,
   yoga,
@@ -57,7 +56,7 @@ export default function Services() {
       <PageHero title="Our Services" link="/services" />
       <div className="container md:px-14 lg:px-24 w-full h-full flex flex-col items-center justify-center z-20 bg-secondary">
         <PageSectionHeader title="Our Services" subtitle="What We Offer" />
-        <div className="w-full h-full flex flex-col mb-12 items-center justify-center">
+        <div className="w-full h-full flex flex-col items-center justify-center">
           {chunkArray(services, 2).map((row, rowIndex) => (
             <div
               key={rowIndex}
@@ -136,7 +135,7 @@ export default function Services() {
               Choose Your Pricing Plan
             </h2>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+          <div className="flex flex-col md:flex-row items-center justify-center pb-16 gap-8">
             {plans.map((plan) => {
               const pack = packages.find((p) => p.id === plan.package);
               return (

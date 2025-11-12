@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { teamMembers } from "../Data/itemsData";
 import { LiaEnvelope, LiaFacebook, LiaInstagram } from "react-icons/lia";
@@ -48,7 +48,6 @@ export default function OurTeam() {
                         <li
                           key={idx}
                           className="text-light hover:text-primary text-lg font-thin p-1 transition-colors duration-300"
-                          onClick={() => setMenuOpen(false)}
                         >
                           <Link to={link.to}>{link.icon}</Link>
                         </li>

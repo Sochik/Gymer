@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import PageSectionHeader from "../Components/PageSectionHeader";
 import {
   FaEnvelope,
@@ -15,7 +15,7 @@ export default function Contact() {
   return (
     <section className="h-auto w-full bg-secondary">
       <PageHero title="Contact Us" link="/contact" />
-      <div className="container w-full md:px-14 lg:px-24 h-auto gap-5 flex flex-col mb-12 items-center justify-center">
+      <div className="container w-full md:px-14 lg:px-24 h-auto gap-5 flex flex-col pb-12 items-center justify-center">
         <PageSectionHeader title="Get in Touch" subtitle="We'd love to hear from you!" />
         <div className="flex flex-col md:flex-row w-full justify-between items-center gap-12 ">
           <div className="mt-6 flex flex-1 flex-col w-full px-4 items-start justify-start">
@@ -79,7 +79,6 @@ export default function Contact() {
                         height="450"
             allowfullscreen=""
             loading="eager"
-            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>

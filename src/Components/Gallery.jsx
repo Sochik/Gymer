@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { galleryimg1, galleryimg2, galleryimg3, galleryimg4, galleryimg5, galleryimg6, galleryimg7, galleryimg8 } from "../assets/images";
 
@@ -71,7 +71,7 @@ export default function Gallery() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.4 }}
                 className={`relative ${colSpan} ${rowSpan} overflow-hidden rounded-lg shadow-lg`}
               >
                 <img
