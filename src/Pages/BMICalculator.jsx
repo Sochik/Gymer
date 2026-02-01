@@ -10,7 +10,7 @@ export default function BMICalculator() {
   return (
     <section className="h-auto w-full bg-secondary">
       <PageHero title="BMI Calculator" link="/bmi-calculator" />
-      <div className="container md:px-14 lg:px-24 w-full h-full flex flex-col items-center justify-center z-20 bg-secondary">
+      <div className=" md:px-14 lg:px-24 w-full h-full flex flex-col items-center justify-center z-20 bg-secondary">
         <div className="w-full h-auto gap-5 flex flex-col md:flex-row mb-12 items-center justify-center">
           <div className="w-full h-auto flex flex-col items-start px-4 py-12 justify-center">
             <PageSectionHeader title="BMI Chart" subtitle="Understand Your Body Mass Index" />

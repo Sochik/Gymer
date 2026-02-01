@@ -28,7 +28,7 @@ export default function About() {
   return (
     <section className="h-auto w-full bg-secondary">
       <PageHero title="About Us" link="/about" />
-      <div className="container w-full md:px-14 lg:px-24 h-auto gap-8 flex flex-col md:flex-row">
+      <div className="w-full md:px-14 lg:px-24 h-auto gap-8 flex flex-col md:flex-row">
         <div className="w-full px-6 md:w-4/6 bg-secondary md:py-8 mt-8 flex flex-col items-center">
           {/* About Us Section */}
           <PageSectionHeader title="About Us" subtitle="Who We Are" />

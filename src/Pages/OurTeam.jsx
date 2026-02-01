@@ -14,9 +14,9 @@ export default function OurTeam() {
     <section className="h-auto w-full bg-secondary">
       <PageHero title="Our Team" link="/team" />
 
-      <div className="container md:px-14 lg:px-24 w-full h-full flex flex-col items-center justify-center z-20 bg-secondary">
+      <div className="md:px-14 lg:px-24 w-full h-full flex flex-col items-center justify-center z-20 bg-secondary">
         <PageSectionHeader title="Meet Our Team" subtitle="Experts in Your Corner" />
-        <div className="w-full h-auto grid grid-cols-2 md:grid-cols-3 mb-16 px-4 gap-4 items-center justify-center bg-secondary z-20">
+        <div className="w-full h-auto grid grid-cols-2 md:grid-cols-3 mb-16 mt-5 gap-4 items-center justify-center bg-secondary z-20">
           {teamMembers.map((card, index) => (
             <div
               key={index}

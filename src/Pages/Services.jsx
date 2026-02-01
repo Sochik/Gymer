@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import {
-    asideimg,
+  asideimg,
   boxing,
   personalTraining,
   strength,
@@ -22,7 +22,8 @@ const services = [
     id: 3,
     image: boxing,
     title: "Boxing Training",
-    description: "Intense boxing workouts to improve your strength and endurance.",
+    description:
+      "Intense boxing workouts to improve your strength and endurance.",
   },
   {
     id: 2,
@@ -54,13 +55,13 @@ export default function Services() {
   return (
     <section className="h-auto w-full bg-secondary">
       <PageHero title="Our Services" link="/services" />
-      <div className="container md:px-14 lg:px-24 w-full h-full flex flex-col items-center justify-center z-20 bg-secondary">
+      <div className=" md:px-14 lg:px-24 w-full h-full flex flex-col items-center justify-center z-20 bg-secondary">
         <PageSectionHeader title="Our Services" subtitle="What We Offer" />
-        <div className="w-full h-full flex flex-col items-center justify-center">
+        <div className="w-full h-full flex flex-col items-center py-5 justify-center">
           {chunkArray(services, 2).map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className="w-full flex flex-col px-4 md:flex-row md:gap-0 gap-6 md:mb-0 mb-6 items-center justify-center"
+              className="w-full flex flex-col md:flex-row md:gap-0 gap-6 md:mb-0 mb-6 items-center justify-center"
             >
               {row.map((service, colIndex) => {
                 // Alternate layout per row for chessboard effect
@@ -102,85 +103,84 @@ export default function Services() {
               })}
             </div>
           ))}
-              </div>
-          </div>
-        <section
-          className="container mx-auto bg-cover bg-center h-full flex items-center justify-center"
-          style={{ backgroundImage: `url(${asideimg})` }}
-        >
-          <div className="w-full h-full px-4 md:px-14 lg:px-24 bg-secondary bg-opacity-35">
-            <div className="flex flex-col w-full items-center justify-center py-24 md:py-48 h-full">
-              <h2 className="text-3xl md:text-5xl font-oswald text-light font-semibold text-center uppercase pb-4">
-                Register to start your journey of fitness and strength
-              </h2>
-              <p className="text-text text-center md:text-center text-xl font-bold font-muli uppercase pb-4">
-                where health, beauty and fitness meet.
-              </p>
-              <Link
-                to="/register"
-                className="mt-3 px-9 md:px-12 font-oswald py-2 bg-inherit text-light border-2 border-primary font-bold rounded-md hover:bg-primary transition-all text-center items-center justify-center block w-fit"
-              >
-                Register
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        <section className="container mx-auto bg-secondary px-4 md:px-14 lg:px-24">
-          <div className="flex flex-col gap-2 items-center pt-32 pb-24 justify-center ">
-            <span className="text-xl md:text-2xl font-bold font-gaegu text-primary text-center uppercase">
-              Our Plan
-            </span>
-            <h2 className="text-3xl md:text-5xl font-oswald text-light font-semibold text-center uppercase">
-              Choose Your Pricing Plan
+        </div>
+      </div>
+      <section
+        className="mx-auto mt-4 bg-cover bg-center h-full flex items-center justify-center"
+        style={{ backgroundImage: `url(${asideimg})` }}
+      >
+        <div className="w-full h-full px-4 md:px-14 lg:px-24 bg-secondary bg-opacity-35">
+          <div className="flex flex-col w-full items-center justify-center py-24 md:py-48 h-full">
+            <h2 className="text-3xl md:text-5xl font-oswald text-light font-semibold text-center uppercase pb-4">
+              Register to start your journey of fitness and strength
             </h2>
+            <p className="text-text text-center md:text-center text-xl font-bold font-muli uppercase pb-4">
+              where health, beauty and fitness meet.
+            </p>
+            <Link
+              to="/register"
+              className="mt-3 px-9 md:px-12 font-oswald py-2 bg-inherit text-light border-2 border-primary font-bold rounded-md hover:bg-primary transition-all text-center items-center justify-center block w-fit"
+            >
+              Register
+            </Link>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-center pb-16 gap-8">
-            {plans.map((plan) => {
-              const pack = packages.find((p) => p.id === plan.package);
-              return (
-                <div
-                  key={plan.id}
-                  className="flex transform w-full -skew-y-6 font-oswald justify-center items-center border-2 border-text p-10 pb-14 mx-6 mb-8 group hover:bg-light transition-all duration-300 ease-in"
-                >
-                  <div className="transform skew-y-6 w-full items-center flex flex-col gap-2 ">
-                    <h2 className="text-center text-light group-hover:text-secondary text-3xl font-semibold mb-2">
-                      {plan.name}
-                    </h2>
-                    <p className="text-center text-primary text-7xl font-bold">
-                      &#8358;{plan.amount}
-                    </p>
-                    <p className="text-center text-sm font-muli group-hover:text-accent mb-6 mt-3 font-semibold uppercase text-text">
-                      {plans.schedule}
-                    </p>
-                    <div>
-                      {pack && (
-                        <ul
-                          key={pack.id}
-                          className="space-y-2 text-center text-base font-muli group-hover:text-accent text-text"
-                        >
-                          <li>{pack.itemone}</li>
-                          <li>{pack.itemtwo}</li>
-                          <li>{pack.itemthree}</li>
-                          <li>{pack.itemfour}</li>
-                          <li>{pack.itemfive}</li>
-                          <li>{pack.itemsix}</li>
-                        </ul>
-                      )}
-                    </div>
-                    <Link
-                      to="/about"
-                      className="mt-3 px-3 md:px-6 py-2 font-muli uppercase font-bold text-sm rounded-md bg-accent transition-all text-center items-center justify-center block w-[50vw] md:w-[16vw] group-hover:bg-primary text-light"
-                    >
-                      Enroll
-                    </Link>
+        </div>
+      </section>
+
+      <section className="container mx-auto bg-secondary px-4 md:px-14 lg:px-24">
+        <div className="flex flex-col gap-2 items-center pt-32 pb-24 justify-center ">
+          <span className="text-xl md:text-2xl font-bold font-gaegu text-primary text-center uppercase">
+            Our Plan
+          </span>
+          <h2 className="text-3xl md:text-5xl font-oswald text-light font-semibold text-center uppercase">
+            Choose Your Pricing Plan
+          </h2>
+        </div>
+        <div className="flex flex-col md:flex-row items-center justify-center pb-16 gap-8">
+          {plans.map((plan) => {
+            const pack = packages.find((p) => p.id === plan.package);
+            return (
+              <div
+                key={plan.id}
+                className="flex transform w-full -skew-y-6 font-oswald justify-center items-center border-2 border-text p-10 pb-14 mx-6 mb-8 group hover:bg-light transition-all duration-300 ease-in"
+              >
+                <div className="transform skew-y-6 w-full items-center flex flex-col gap-2 ">
+                  <h2 className="text-center text-light group-hover:text-secondary text-3xl font-semibold mb-2">
+                    {plan.name}
+                  </h2>
+                  <p className="text-center text-primary text-7xl font-bold">
+                    &#8358;{plan.amount}
+                  </p>
+                  <p className="text-center text-sm font-muli group-hover:text-accent mb-6 mt-3 font-semibold uppercase text-text">
+                    {plans.schedule}
+                  </p>
+                  <div>
+                    {pack && (
+                      <ul
+                        key={pack.id}
+                        className="space-y-2 text-center text-base font-muli group-hover:text-accent text-text"
+                      >
+                        <li>{pack.itemone}</li>
+                        <li>{pack.itemtwo}</li>
+                        <li>{pack.itemthree}</li>
+                        <li>{pack.itemfour}</li>
+                        <li>{pack.itemfive}</li>
+                        <li>{pack.itemsix}</li>
+                      </ul>
+                    )}
                   </div>
+                  <Link
+                    to="/about"
+                    className="mt-3 px-3 md:px-6 py-2 font-muli uppercase font-bold text-sm rounded-md bg-accent transition-all text-center items-center justify-center block w-[50vw] md:w-[16vw] group-hover:bg-primary text-light"
+                  >
+                    Enroll
+                  </Link>
                 </div>
-              );
-            })}
-          </div>
-        </section>
-      
+              </div>
+            );
+          })}
+        </div>
+      </section>
     </section>
   );
 }

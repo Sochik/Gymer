@@ -105,6 +105,15 @@ export default function Register() {
               Register
             </button>
           </form>
+          <div className="w-full h-auto items-start px-4 py-12 justify-center">
+          <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.332992103509!2d7.6207215999999995!3d9.0333575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e060547db4e29%3A0x39109b283278aa3d!2sOrange%20Mkt%2C%20Ado%20961105%2C%20Nasarawa!5e0!3m2!1sen!2sng!4v1748953444412!5m2!1sen!2sng"
+                      width="100%"
+                        height="450"
+            allowfullscreen=""
+            loading="eager"
+          ></iframe>
+        </div>
         </div>
         <div className="flex flex-col w-full md:w-2/6 bg-secondary px-6">
           <Aside />

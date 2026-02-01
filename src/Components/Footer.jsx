@@ -25,7 +25,7 @@ export default function Footer() {
 
   return (
     <div className=" bg-backdrop w-full flex flex-col">
-      <aside className="flex w-full container mx-auto justify-center p-4 items-center text-light font-muli font-semibold text-sm">
+      <aside className="flex flex-col md:flex-row w-full container mx-auto justify-around p-3 md:p-4 items-start md:items-center text-light font-muli font-semibold text-sm">
         {[
           {
             icon: <FaMapLocationDot />,
@@ -34,7 +34,7 @@ export default function Footer() {
           { icon: <FaMobile />, text: "+1 (234) 567-8900 " },
           { icon: <FaEnvelope />, text: "info@gymer.com" },
         ].map((item, index) => (
-          <div key={index} className="flex px-10 items-center mt-2">
+          <div key={index} className="flex md:px-10 items-center mt-2">
             <span className="h-20 w-20 bg-primary mb-4 group-hover:bg-primary rounded-full flex items-center justify-center text-light group-hover:text-light text-3xl">
               {item.icon}
             </span>
@@ -42,9 +42,10 @@ export default function Footer() {
           </div>
         ))}
       </aside>
-      <div className="justify-center w-full items-center bg-[#000000] ">
-        <div className=" mx-auto flex md:px-14 lg:px-24 gap-4 pt-12 pb-4 justify-center w-full items-center flex-wrap bg-[#000000] text-text font-muli text-sm">
-          <div className="flex flex-col flex-1 w-1/3 items-start">
+      <div className="justify-evenly w-full items-center p-3 bg-[#000000] ">
+        <div className=" mx-auto flex flex-col md:flex-row md:px-14 lg:px-24 gap-4 pt-12 pb-4 justify-center w-full flex-wrap bg-[#000000] text-text font-muli text-sm">
+          {/* Logo and Description */}
+          <div className="flex flex-col flex-1 md:w-1/3 items-start">
             <Link to="/" className="inline-block">
               <img src={logo} alt="Gymer logo" className="w-40 h-auto mb-2" />
             </Link>
@@ -72,7 +73,8 @@ export default function Footer() {
               ))}
             </ol>
           </div>
-          <div className="flex gap-4 w-1/3 items-center justify-around mx-auto">
+          {/*Quick Links and Support*/}
+          <div className="flex md:gap-4 md:w-1/3 md:items-center items-start gap-24 md:justify-around md:mx-auto">
             <div className="flex flex-col">
               <h3 className="text-2xl font-semibold mb-4 font-oswald text-light">
                 Quick Links
@@ -112,7 +114,8 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className="flex flex-col w-1/3 items-start justify-evenly mx-auto">
+          {/* Tips & Guides */}
+          <div className="flex flex-col md:w-1/3 items-start justify-evenly md:mx-auto">
             <h3 className="text-2xl mb-4 font-semibold font-oswald text-light">
               Tips & Guides
             </h3>
@@ -122,7 +125,7 @@ export default function Footer() {
                 <div key={idx} className="flex flex-col">
                   <Link
                     to={tip.link}
-                    className="items-center gap-3 px-6 md:px-0 pb-4 group hover:bg-backdrop rounded"
+                    className="items-center gap-3 pb-4 group hover:bg-backdrop rounded"
                   >
                     <div>
                       <h6 className="text-text font-oswald font-normal group-hover:text-light">
@@ -137,12 +140,12 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className="w-full h-px bg-accent mb-4" />
+        </div>
+      </div>
+      <div className="w-full h-px bg-accent mb-4" />
           <div className="w-full text-center text-text pb-4">
             &copy; {new Date().getFullYear()} Gymer. All rights reserved.
             </div>
-        </div>
-      </div>
     </div>
   );
 }

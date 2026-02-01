@@ -9,7 +9,7 @@ export default function OurGallery() {
   return (
     <section className="h-auto w-full bg-secondary">
       <PageHero title="Our Gallery" link="/gallery" />
-      <div className="container md:px-14 lg:px-24 w-full h-full flex flex-col items-center justify-center z-20 bg-secondary">
+      <div className=" md:px-14 lg:px-24 w-full h-full flex flex-col items-center justify-center z-20 bg-secondary">
         <div className="w-full h-auto flex flex-col items-start px-4 py-12 justify-center">
           <h2 className="text-md font-bold text-primary font-muli uppercase text-center mt-10">
             Our Gallery

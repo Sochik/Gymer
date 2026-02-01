@@ -32,7 +32,7 @@ export default function Timetable() {
   return (
     <section className="h-auto w-full bg-secondary">
       <PageHero title="Classes Timetable" link="/timetable" />
-      <div className="container px-6 md:px-14 lg:px-24 w-full h-full flex flex-col items-center justify-center z-20 bg-secondary">
+      <div className=" px-6 md:px-14 lg:px-24 w-full h-full flex flex-col items-center justify-center z-20 bg-secondary">
         <div className="w-full h-auto flex md:flex-row flex-col py-12 justify-center">
           <div className="w-full h-auto flex flex-col items-start justify-center">
             <h2 className="text-md font-bold text-primary font-muli uppercase text-center">
